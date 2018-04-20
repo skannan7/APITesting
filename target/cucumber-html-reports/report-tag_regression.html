@@ -1,0 +1,6081 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Tag: @regression</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>JD ByRider Automation Execution Results</td>
+            <td>18 Apr 2018, 16:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@regression</td>
+                    <td      class="passed"    >101</td>
+          <td      class="failed"    >15</td>
+          <td     class="skipped"   >51</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">167</td>
+
+          <td >0</td>
+          <td  class="failed"    >15</td>
+          <td class="total">15</td>
+
+          <td class="duration" data-value="1513587439">1s 513ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">632ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-7 - Calling client with correct social security number</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case1.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>16:14:07.598 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">030ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:14:07.633 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">599ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:46)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>16:14:08.144 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.229 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 547 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.230 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">012ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-8 - Calling client service with correct social security number that return both address type</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case7.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>16:14:08.289 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>16:14:08.295 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:74)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>16:14:08.297 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.299 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.299 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..addressType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only [&quot;CA&quot;,&quot;FA&quot;]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">021ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-9 - Calling client service with correct social security number that return only the address type CA</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case9.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>16:14:08.398 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">013ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>16:14:08.416 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;6789&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-17">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:104)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>16:14:08.423 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 164
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;6789&quot;}}}}
+
+16:14:08.426 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 5 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.426 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..addressType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only [&quot;CA&quot;]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">007ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-10- Calling client service to validate primary address</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-19" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case9.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>16:14:08.517 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>16:14:08.520 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;6789&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-23">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:136)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>16:14:08.522 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 164
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;6789&quot;}}}}
+
+16:14:08.523 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.523 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..addresses[0]..primaryAddress</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains  [&quot; 2 SHORT WHARF RD &quot;]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">020ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-11- Calling client service to validate primary address of both  CA and FA</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case7.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>16:14:08.587 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>16:14:08.599 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:168)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>16:14:08.602 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.604 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 4 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.604 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..addresses[0,1]..primaryAddress</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only [&quot;883 FLUTE WAY&quot;,&quot;052 H PDEHO VW&quot;]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">012ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-12 - Calling  validation service with incorrect social security number with digit less than 9</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case2.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>16:14:08.711 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>16:14:08.717 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;666&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:200)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>16:14:08.720 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 163
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;666&quot;}}}}
+
+16:14:08.722 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 4 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.722 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print uploadStatusCode</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">031ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-13- Calling client service to validate two types of address are validated.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-37" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case8.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-39">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details">
+        <pre>16:14:08.763 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">026ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-40">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-40" class="collapse collapsable-details">
+        <pre>16:14:08.796 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-41">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-41" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:232)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-42" class="collapse collapsable-details">
+        <pre>16:14:08.799 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.800 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.800 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..addressType</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only [&quot;CA&quot;,&quot;FA&quot;]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">007ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-15 - Calling client service with correct social security number that return ssnVerified</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-43" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-44">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-44" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case9.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-45">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-45" class="collapse collapsable-details">
+        <pre>16:14:08.820 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-46">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-46" class="collapse collapsable-details">
+        <pre>16:14:08.824 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;6789&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-47" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:302)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>16:14:08.827 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 164
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;6789&quot;}}}}
+
+16:14:08.829 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.829 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..ssnVerified</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only ['N']</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_1-feature.html">com/EWSFunctionalTest/feature/EWS_1.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">013ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-15 - Calling client service with correct social security number that return ssnVerified</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-49" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-50">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-50" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case8.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-51">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-51" class="collapse collapsable-details">
+        <pre>16:14:08.920 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-52">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-52" class="collapse collapsable-details">
+        <pre>16:14:08.927 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-53">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-53" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:334)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-54">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details">
+        <pre>16:14:08.931 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.933 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 5 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.933 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $..ssnVerified</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts contains only ['Y']</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">629ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-55">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-1 - Calling IFPD service with correct social security number and header information.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-55" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-56">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-56" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case1.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">010ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-57">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-57" class="collapse collapsable-details">
+        <pre>16:14:07.603 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">032ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-58">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-58" class="collapse collapsable-details">
+        <pre>16:14:07.648 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">583ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-59">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-59" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:42)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-60">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-60" class="collapse collapsable-details">
+        <pre>16:14:08.151 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basaicfdffsfsf
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; orchestrationCode: xxxx
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.230 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 546 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.231 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">023ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-2 - Calling IFPD service with incorrect Authentication.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-62">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-62" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = { organizationcode :'EWS',ig-orchestrationcode :'',Authorization :'Basic ZXdzY3N0c3Vz' }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case1.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>16:14:08.331 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">012ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-64">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-64" class="collapse collapsable-details">
+        <pre>16:14:08.346 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;66&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-65">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-65" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:76)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-66">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-66" class="collapse collapsable-details">
+        <pre>16:14:08.351 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZXdzY3N0c3Vz
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 162
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; ig-orchestrationcode: 
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;66&quot;}}}}
+
+16:14:08.353 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.353 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 401</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">016ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-67">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-3 - Calling IFPD service with correct social security number and  incorrect header information-missing ig-orch code.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-67" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-68">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-68" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = { organizationcode :'EWS',ig-orchestrationcode :'',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-69">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details">
+        <pre>16:14:08.473 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-70">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-70" class="collapse collapsable-details">
+        <pre>16:14:08.482 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;644#$%%^&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-71">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-71" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:110)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-72">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details">
+        <pre>16:14:08.484 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 168
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; ig-orchestrationcode: 
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;644#$%%^&quot;}}}}
+
+16:14:08.485 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 2 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.485 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 400</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $.description</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts == &quot;ig-orchestrationcode is missing in request header&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">031ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-73">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-4 - Calling IFPD service with correct social security number and  incorrect header information-missing organization code.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-73" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-74">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-74" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = {  organizationcode :'',ig-orchestrationcode :'test50dtec',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-75">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details">
+        <pre>16:14:08.519 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-76">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-76" class="collapse collapsable-details">
+        <pre>16:14:08.536 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;644#$%%^&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">014ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-77">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-77" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:148)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details">
+        <pre>16:14:08.549 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 168
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; ig-orchestrationcode: test50dtec
+1 &gt; organizationcode: 
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;644#$%%^&quot;}}}}
+
+16:14:08.551 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 12 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.551 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 400</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print uploadStatusCode</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def autoResponseProducts =  $.description</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match autoResponseProducts == &quot;organizationcode is missing in request header&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">022ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-79">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-5 - Calling IFPD service with correct social security number and  incorrect header information-missing authorization.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-79" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-80">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-80" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = { organizationcode :'EWS',ig-orchestrationcode :'test50dtec',Authorization :'' }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-81">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-81" class="collapse collapsable-details">
+        <pre>16:14:08.594 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-82">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-82" class="collapse collapsable-details">
+        <pre>16:14:08.599 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;644#$%%^&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">016ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-83">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-83" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:190)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-84">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-84" class="collapse collapsable-details">
+        <pre>16:14:08.606 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: 
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 168
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset=UTF-8
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; ig-orchestrationcode: test50dtec
+1 &gt; organizationcode: EWS
+{&quot;applicant&quot;:{&quot;orderInfo&quot;:{},&quot;PrimaryConsumer&quot;:{&quot;personalInformation&quot;:{}}},&quot;applicants&quot;:{&quot;primaryConsumer&quot;:{&quot;personalInformation&quot;:{&quot;socialSecurityNumber&quot;:&quot;644#$%%^&quot;}}}}
+
+16:14:08.616 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 16 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.616 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 401</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_com-EWSFunctionalTest-feature-EWS_2-feature_1.html">com/EWSFunctionalTest/feature/EWS_2.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_regression.html">@regression</a>
+      </div>
+
+  
+  <span class="lead-duration duration">029ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-85">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">IFPD-6 - Calling IFPD service with correct social security number and  incorrect content type.</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-85" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-86">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-86" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Content-Type = 'application/vnd.com.equifax.ic.saas'</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = { organizationcode :'EWS',ig-orchestrationcode :'test50dtec',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url endPointUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-87">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-87" class="collapse collapsable-details">
+        <pre>16:14:08.671 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set baseJsonRequest.applicants.primaryConsumer.personalInformation</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>path</td>
+                                  <td>value</td>
+                              </tr>
+                          <tr>
+                                  <td>socialSecurityNumber</td>
+                                  <td>userInfo</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print baseJsonRequest</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-88">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-88" class="collapse collapsable-details">
+        <pre>16:14:08.679 INFO  - [print] {
+  &quot;applicant&quot;: {
+    &quot;orderInfo&quot;: {
+    },
+    &quot;PrimaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+      }
+    }
+  },
+  &quot;applicants&quot;: {
+    &quot;primaryConsumer&quot;: {
+      &quot;personalInformation&quot;: {
+        &quot;socialSecurityNumber&quot;: &quot;644#$%%^&quot;
+      }
+    }
+  }
+}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">013ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-89">
+          <a>com.intuit.karate.exception.KarateException: </a>
+      </div>
+      <div id="msg-89" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ?.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:226)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-90">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-90" class="collapse collapsable-details">
+        <pre>16:14:08.685 DEBUG - 
+1 &gt; POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 168
+1 &gt; Content-Type: application/vnd.com.equifax.ic.saas
+1 &gt; Host: AN00611970.eis.equifax.com:9090
+1 &gt; User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)
+1 &gt; ig-orchestrationcode: test50dtec
+1 &gt; organizationcode: EWS
+
+16:14:08.688 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 5 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api
+16:14:08.688 ERROR - http request failed: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">def uploadStatusCode = responseStatus</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">status 415</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

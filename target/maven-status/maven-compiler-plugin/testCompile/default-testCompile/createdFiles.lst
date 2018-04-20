@@ -1,0 +1,4 @@
+com\EWSFunctionalTest\testConfigs\EWSDataBaseConnection.class
+com\EWSFunctionalTest\EWSFunctionalRunner.class
+com\EWSFunctionalTest\testConfigs\EWSDatabaseRetrieveData.class
+com\EWSFunctionalTest\testConfigs\EWSDatabaseRetrieveData$1.class

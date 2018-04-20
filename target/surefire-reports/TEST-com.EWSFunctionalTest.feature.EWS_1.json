@@ -1,0 +1,3432 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 336307792,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:07.129 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:07.134 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 12623672,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3555682,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 5435659,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 61557062,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 360590,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 8206728,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "IFPD-7 - Calling client with correct social security number",
+        "description": "",
+        "id": "validation-service;ifpd-7---calling-client-with-correct-social-security-number",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 558443,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case1.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case1.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 80047,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 77404,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 945841,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 36,
+              "value": "16:14:07.598 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 30373764,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 40
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 42
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 846915,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 44,
+              "value": "16:14:07.633 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"66\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 599580809,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:46)\r\n",
+              "status": "failed"
+            },
+            "line": 46,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 46,
+              "value": "16:14:08.144 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 162\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"66\"}}}}\n\r\n16:14:08.229 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 547 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.230 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 48,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "line": 26,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2117097,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.257 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.259 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 9093665,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 367387,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 4478113,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1391764,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 325475,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3969889,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 56,
+        "name": "IFPD-8 - Calling client service with correct social security number that return both address type",
+        "description": "",
+        "id": "validation-service;ifpd-8---calling-client-service-with-correct-social-security-number-that-return-both-address-type",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 472354,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case7.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case7.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 89486,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 60035,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 778572,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 64,
+              "value": "16:14:08.289 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3497157,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 68
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 70
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 876366,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 72,
+              "value": "16:14:08.295 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"66\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 6560851,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:74)\r\n",
+              "status": "failed"
+            },
+            "line": 74,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 74,
+              "value": "16:14:08.297 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 162\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"66\"}}}}\n\r\n16:14:08.299 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.299 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 76,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 78,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 80,
+            "name": "def autoResponseProducts \u003d  $..addressType",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 82,
+            "name": "match autoResponseProducts contains only [\"CA\",\"FA\"]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 54,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1735740,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.313 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.314 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 44076940,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 493876,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1072708,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 11823578,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1415552,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 8967175,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 86,
+        "name": "IFPD-9 - Calling client service with correct social security number that return only the address type CA",
+        "description": "",
+        "id": "validation-service;ifpd-9---calling-client-service-with-correct-social-security-number-that-return-only-the-address-type-ca",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 713250,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 172177,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71740,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1061381,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 94,
+              "value": "16:14:08.398 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 13816829,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 98
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 100
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 525592,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 102,
+              "value": "16:14:08.416 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"6789\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 5597263,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:104)\r\n",
+              "status": "failed"
+            },
+            "line": 104,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 104,
+              "value": "16:14:08.423 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 164\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"6789\"}}}}\n\r\n16:14:08.426 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 5 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.426 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 106,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 108,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 110,
+            "name": "def autoResponseProducts \u003d  $..addressType",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 112,
+            "name": "match autoResponseProducts contains only [\"CA\"]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 84,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1986455,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.494 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.495 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 4186620,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 325853,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 253734,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1075728,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 345865,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 5158891,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 118,
+        "name": "IFPD-10- Calling client service to validate primary address",
+        "description": "",
+        "id": "validation-service;ifpd-10--calling-client-service-to-validate-primary-address",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1957758,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 52861,
+              "status": "passed"
+            },
+            "line": 122,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 46065,
+              "status": "passed"
+            },
+            "line": 124,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 444413,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 126,
+              "value": "16:14:08.517 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 1251682,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 130
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 132
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 608284,
+              "status": "passed"
+            },
+            "line": 134,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 134,
+              "value": "16:14:08.520 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"6789\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3420886,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:136)\r\n",
+              "status": "failed"
+            },
+            "line": 136,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 136,
+              "value": "16:14:08.522 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 164\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"6789\"}}}}\n\r\n16:14:08.523 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.523 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 138,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 140,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 142,
+            "name": "def autoResponseProducts \u003d  $..addresses[0]..primaryAddress",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 144,
+            "name": "match autoResponseProducts contains  [\" 2 SHORT WHARF RD \"]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 116,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1378927,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.533 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.536 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 20070328,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1017958,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 374938,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1189758,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 573546,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3645924,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 150,
+        "name": "IFPD-11- Calling client service to validate primary address of both  CA and FA",
+        "description": "",
+        "id": "validation-service;ifpd-11--calling-client-service-to-validate-primary-address-of-both--ca-and-fa",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 383622,
+              "status": "passed"
+            },
+            "line": 152,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case7.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case7.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 72874,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 160094,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4802455,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 158,
+              "value": "16:14:08.587 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 9117831,
+              "status": "passed"
+            },
+            "line": 160,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 162
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 164
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1758395,
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 166,
+              "value": "16:14:08.599 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"66\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 4313487,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:168)\r\n",
+              "status": "failed"
+            },
+            "line": 168,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 168,
+              "value": "16:14:08.602 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 162\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"66\"}}}}\n\r\n16:14:08.604 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 4 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.604 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 170,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 172,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 174,
+            "name": "def autoResponseProducts \u003d  $..addresses[0,1]..primaryAddress",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 176,
+            "name": "match autoResponseProducts contains only [\"883 FLUTE WAY\",\"052 H PDEHO VW\"]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 148,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1753864,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.647 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.647 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3582112,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 342843,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 291492,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1000213,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 447434,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2748036,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 182,
+        "name": "IFPD-12 - Calling  validation service with incorrect social security number with digit less than 9",
+        "description": "",
+        "id": "validation-service;ifpd-12---calling--validation-service-with-incorrect-social-security-number-with-digit-less-than-9",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1850525,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case2.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case2.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 80047,
+              "status": "passed"
+            },
+            "line": 186,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53239,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 757805,
+              "status": "passed"
+            },
+            "line": 190,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 190,
+              "value": "16:14:08.711 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3648944,
+              "status": "passed"
+            },
+            "line": 192,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 194
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 196
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 849180,
+              "status": "passed"
+            },
+            "line": 198,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 198,
+              "value": "16:14:08.717 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"666\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 5264992,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:200)\r\n",
+              "status": "failed"
+            },
+            "line": 200,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 200,
+              "value": "16:14:08.720 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 163\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"666\"}}}}\n\r\n16:14:08.722 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 4 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.722 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 202,
+            "name": "status 400",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 204,
+            "name": "print uploadStatusCode",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 206,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "line": 180,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1768968,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.749 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.749 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3038396,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 296779,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 336047,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 897133,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 929983,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1404603,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 214,
+        "name": "IFPD-13- Calling client service to validate two types of address are validated.",
+        "description": "",
+        "id": "validation-service;ifpd-13--calling-client-service-to-validate-two-types-of-address-are-validated.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 416095,
+              "status": "passed"
+            },
+            "line": 216,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case8.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case8.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 61923,
+              "status": "passed"
+            },
+            "line": 218,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47575,
+              "status": "passed"
+            },
+            "line": 220,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 357947,
+              "status": "passed"
+            },
+            "line": 222,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 222,
+              "value": "16:14:08.763 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 26752005,
+              "status": "passed"
+            },
+            "line": 224,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 226
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 228
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 674738,
+              "status": "passed"
+            },
+            "line": 230,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 230,
+              "value": "16:14:08.796 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"66\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3498668,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:232)\r\n",
+              "status": "failed"
+            },
+            "line": 232,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 232,
+              "value": "16:14:08.799 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 162\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"66\"}}}}\n\r\n16:14:08.800 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.800 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 234,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 236,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 238,
+            "name": "def autoResponseProducts \u003d  $..addressType",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 240,
+            "name": "match autoResponseProducts contains only [\"CA\",\"FA\"]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 212,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1378926,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.810 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.810 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 1298880,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 339068,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 215222,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 814443,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 325098,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1644744,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 284,
+        "name": "IFPD-15 - Calling client service with correct social security number that return ssnVerified",
+        "description": "",
+        "id": "validation-service;ifpd-15---calling-client-service-with-correct-social-security-number-that-return-ssnverified",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 458384,
+              "status": "passed"
+            },
+            "line": 286,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case9.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 63811,
+              "status": "passed"
+            },
+            "line": 288,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 48330,
+              "status": "passed"
+            },
+            "line": 290,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 525593,
+              "status": "passed"
+            },
+            "line": 292,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 292,
+              "value": "16:14:08.820 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 1984944,
+              "status": "passed"
+            },
+            "line": 294,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 296
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 298
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 814443,
+              "status": "passed"
+            },
+            "line": 300,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 300,
+              "value": "16:14:08.824 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"6789\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 3814325,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:302)\r\n",
+              "status": "failed"
+            },
+            "line": 302,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 302,
+              "value": "16:14:08.827 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 164\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"6789\"}}}}\n\r\n16:14:08.829 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 3 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.829 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 304,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 306,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 308,
+            "name": "def autoResponseProducts \u003d  $..ssnVerified",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 310,
+            "name": "match autoResponseProducts contains only [\u0027N\u0027]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 282,
+            "name": "@regression"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3239646,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def baseJsonRequest \u003d read(\u0027../requesttemplates/validationService.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../requesttemplates/validationService.json\u0027)",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "16:14:08.885 ERROR - could not find or read file: karate-config.js, prefix: CLASSPATH\r\n16:14:08.886 WARN  - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 2517333,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def baseData \u003d read(\u0027../testdata/validationServiceData.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseData",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027../testdata/validationServiceData.json\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 346242,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def pathIfpd \u003d \u0027ic-saas-client/api\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pathIfpd",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027ic-saas-client/api\u0027",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 950372,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def endPointURLFPD \u003d \u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointURLFPD",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027http://AN00611970.eis.equifax.com:9090/\u0027",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1770478,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "def endPointUrl \u003d endPointURLFPD + pathIfpd",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                },
+                {
+                  "val": "endPointURLFPD + pathIfpd",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 315658,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "header Content-Type \u003d \u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/vnd.com.equifax.ic.saas.request.v1+json\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 15259944,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "configure headers \u003d read(\u0027../headers/ifpdHeader.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027../headers/ifpdHeader.json\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 316,
+        "name": "IFPD-15 - Calling client service with correct social security number that return ssnVerified",
+        "description": "",
+        "id": "validation-service;ifpd-15---calling-client-service-with-correct-social-security-number-that-return-ssnverified",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1237712,
+              "status": "passed"
+            },
+            "line": 318,
+            "name": "def userInfo \u003d get[0] baseData.testData.Feature6.case8.socialSecurityNumber",
+            "match": {
+              "arguments": [
+                {
+                  "val": "userInfo",
+                  "offset": 4
+                },
+                {
+                  "val": "get[0] baseData.testData.Feature6.case8.socialSecurityNumber",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 71740,
+              "status": "passed"
+            },
+            "line": 320,
+            "name": "url endPointUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "endPointUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 38891,
+              "status": "passed"
+            },
+            "line": 322,
+            "name": "request baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1270561,
+              "status": "passed"
+            },
+            "line": 324,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 324,
+              "value": "16:14:08.920 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 2610597,
+              "status": "passed"
+            },
+            "line": 326,
+            "name": "set baseJsonRequest.applicants.primaryConsumer.personalInformation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest.applicants.primaryConsumer.personalInformation",
+                  "offset": 4
+                },
+                {}
+              ],
+              "location": "StepDefs.setByPathTable(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "path",
+                  "value"
+                ],
+                "line": 328
+              },
+              {
+                "cells": [
+                  "socialSecurityNumber",
+                  "userInfo"
+                ],
+                "line": 330
+              }
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2686490,
+              "status": "passed"
+            },
+            "line": 332,
+            "name": "print baseJsonRequest",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baseJsonRequest",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 332,
+              "value": "16:14:08.927 INFO  - [print] {\n  \"applicant\": {\n    \"orderInfo\": {\n    },\n    \"PrimaryConsumer\": {\n      \"personalInformation\": {\n      }\n    }\n  },\n  \"applicants\": {\n    \"primaryConsumer\": {\n      \"personalInformation\": {\n        \"socialSecurityNumber\": \"66\"\n      }\n    }\n  }\n}\n\r\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 5783789,
+              "error_message": "com.intuit.karate.exception.KarateException: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n\tat com.intuit.karate.StepDefs.method(StepDefs.java:364)\r\n\tat ?.When method post(com/EWSFunctionalTest/feature/EWS_1.feature:334)\r\n",
+              "status": "failed"
+            },
+            "line": 334,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 334,
+              "value": "16:14:08.931 DEBUG - \n1 \u003e POST http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: Basaicfdffsfsf\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 162\n1 \u003e Content-Type: application/vnd.com.equifax.ic.saas.request.v1+json; charset\u003dUTF-8\n1 \u003e Host: AN00611970.eis.equifax.com:9090\n1 \u003e User-Agent: Apache-HttpClient/4.5.3 (Java/9.0.4)\n1 \u003e orchestrationCode: xxxx\n1 \u003e organizationcode: EWS\n{\"applicant\":{\"orderInfo\":{},\"PrimaryConsumer\":{\"personalInformation\":{}}},\"applicants\":{\"primaryConsumer\":{\"personalInformation\":{\"socialSecurityNumber\":\"66\"}}}}\n\r\n16:14:08.933 ERROR - java.net.UnknownHostException: AN00611970.eis.equifax.com, http call failed after 5 milliseconds for URL: http://AN00611970.eis.equifax.com:9090/ic-saas-client/api\r\n16:14:08.933 ERROR - http request failed: \njava.net.UnknownHostException: AN00611970.eis.equifax.com\r\n"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 336,
+            "name": "status 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 338,
+            "name": "print response",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 340,
+            "name": "def autoResponseProducts \u003d  $..ssnVerified",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 342,
+            "name": "match autoResponseProducts contains only [\u0027Y\u0027]",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 314,
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "com/EWSFunctionalTest/feature/EWS_1.feature",
+    "description": "Validation Service",
+    "id": "validation-service",
+    "keyword": "Feature",
+    "uri": "com/EWSFunctionalTest/feature/EWS_1.feature"
+  }
+]

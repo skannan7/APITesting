@@ -1,0 +1,85 @@
+{"name": "Test Data",
+
+  "description": "Information's includes data for validation request based on scenerios",
+
+  "testData": {
+
+       "Feature6": {
+
+           "case1": {
+
+             "socialSecurityNumber": "66"
+
+             },
+
+             "case2": {
+
+               "socialSecurityNumber": "666"
+
+             },
+
+          
+
+             "case3": {
+
+               "socialSecurityNumber": "66y6130"
+
+             },
+
+             
+
+              "case4": {
+
+                "socialSecurityNumber": "644#$%%^"
+
+             },
+
+            
+
+             "case5": {
+
+               "socialSecurityNumber": ""
+
+             },
+
+            
+
+             "case6": {
+
+              
+
+             },
+
+             "case7": {
+
+             "socialSecurityNumber": "66"
+
+             },
+
+             "case8": {
+
+               "socialSecurityNumber": "66"
+
+             },
+
+             "case9": {
+
+               "socialSecurityNumber": "6789"
+
+             },
+
+            
+
+             "case10": {
+
+               "socialSecurityNumber": "6660"
+
+             }
+
+            
+
+             }
+
+       }
+
+}

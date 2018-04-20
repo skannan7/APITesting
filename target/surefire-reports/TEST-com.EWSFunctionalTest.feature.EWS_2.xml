@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="6" name="Validation Service" skipped="0" tests="6" time="1.257062">
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-1 - Calling IFPD service with correct social security number and header information." time="1.048276">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:42)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* def userInfo = get[0] baseData.testData.Feature6.case1.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 200................................................................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:42)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-2 - Calling IFPD service with incorrect Authentication." time="0.052949">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:76)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* configure headers = { organizationcode :'EWS',ig-orchestrationcode :'',Authorization :'Basic ZXdzY3N0c3Vz' }.passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* def userInfo = get[0] baseData.testData.Feature6.case1.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 401................................................................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:76)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-3 - Calling IFPD service with correct social security number and  incorrect header information-missing ig-orch code." time="0.049289">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:110)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = { organizationcode :'EWS',ig-orchestrationcode :'',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }.passed
+* def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 400................................................................skipped
+* def autoResponseProducts =  $.description.................................skipped
+And match autoResponseProducts == "ig-orchestrationcode is missing in request header".skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:110)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-4 - Calling IFPD service with correct social security number and  incorrect header information-missing organization code." time="0.038734">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:148)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = {  organizationcode :'',ig-orchestrationcode :'test50dtec',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }.passed
+* def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 400................................................................skipped
+* print uploadStatusCode....................................................skipped
+* def autoResponseProducts =  $.description.................................skipped
+And match autoResponseProducts == "organizationcode is missing in request header".skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:148)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-5 - Calling IFPD service with correct social security number and  incorrect header information-missing authorization." time="0.028907">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:190)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = { organizationcode :'EWS',ig-orchestrationcode :'test50dtec',Authorization :'' }.passed
+* def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 401................................................................skipped
+* print response............................................................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:190)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="com.EWSFunctionalTest.feature.EWS_2" name="IFPD-6 - Calling IFPD service with correct social security number and  incorrect content type." time="0.038907">
+        <failure message="com.intuit.karate.exception.KarateException: &#10;java.net.UnknownHostException: AN00611970.eis.equifax.com&#13;&#10;&#9;at com.intuit.karate.StepDefs.method(StepDefs.java:364)&#13;&#10;&#9;at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:226)&#13;&#10;">
+            <![CDATA[* def baseJsonRequest = read('../requesttemplates/validationService.json')..passed
+* def baseData = read('../testdata/validationServiceData.json').............passed
+* def pathIfpd = 'ic-saas-client/api'.......................................passed
+* def endPointURLFPD = 'http://AN00611970.eis.equifax.com:9090/'............passed
+* def endPointUrl = endPointURLFPD + pathIfpd...............................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas.request.v1+json'.passed
+* configure headers = read('../headers/ifpdHeader.json')....................passed
+* header Content-Type = 'application/vnd.com.equifax.ic.saas'...............passed
+* configure headers = { organizationcode :'EWS',ig-orchestrationcode :'test50dtec',Authorization :'Basic ZXdzY3N0c3VzZXI6Pz1qOiZ4TUpKTSVnaWV3czIzNA==' }.passed
+* def userInfo = get[0] baseData.testData.Feature6.case4.socialSecurityNumber.passed
+Given url endPointUrl.......................................................passed
+And request baseJsonRequest.................................................passed
+* print baseJsonRequest.....................................................passed
+* set baseJsonRequest.applicants.primaryConsumer.personalInformation........passed
+* print baseJsonRequest.....................................................passed
+When method post............................................................failed
+Then def uploadStatusCode = responseStatus..................................skipped
+* status 415................................................................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: 
+java.net.UnknownHostException: AN00611970.eis.equifax.com
+	at com.intuit.karate.StepDefs.method(StepDefs.java:364)
+	at ✽.When method post(com/EWSFunctionalTest/feature/EWS_2.feature:226)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
